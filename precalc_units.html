@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joel's Pre-Calculus 11 Speed Run Unit 1-4</title>
+<style>
+  :root{
+    --navy:#1d2b4f;
+    --blue:#2f6fed;
+    --teal:#0fa3a3;
+    --amber:#e8963c;
+    --paper:#faf8f3;
+    --card:#ffffff;
+    --ink:#22283a;
+    --muted:#6b7280;
+    --line:#e6e2d8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Georgia', 'Iowan Old Style', serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  header{
+    background:linear-gradient(135deg,var(--navy),#2c3e6b);
+    color:#fff;
+    padding:48px 24px 36px;
+    text-align:center;
+  }
+  header h1{
+    margin:0 0 8px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    font-size:2.1rem;
+    letter-spacing:.5px;
+  }
+  header p{
+    margin:0;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    color:#c9d3ee;
+    font-size:1rem;
+  }
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    padding:18px;
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  nav a{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.85rem;
+    font-weight:600;
+    color:var(--navy);
+    text-decoration:none;
+    padding:8px 14px;
+    border:1.5px solid var(--navy);
+    border-radius:20px;
+    transition:.2s;
+  }
+  nav a:hover{background:var(--navy);color:#fff;}
+
+  main{max-width:840px;margin:0 auto;padding:36px 20px 80px;}
+
+  .unit{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:32px 30px;
+    margin-bottom:44px;
+    box-shadow:0 2px 10px rgba(30,30,60,.05);
+    scroll-margin-top:80px;
+  }
+  .unit-tag{
+    display:inline-block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#fff;
+    padding:4px 12px;
+    border-radius:20px;
+    margin-bottom:12px;
+  }
+  .unit1 .unit-tag{background:var(--blue);}
+  .unit2 .unit-tag{background:var(--teal);}
+  .unit3 .unit-tag{background:var(--amber);}
+  .unit4 .unit-tag{background:#a4508b;}
+
+  .unit h2{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    margin:0 0 18px;
+    font-size:1.6rem;
+    color:var(--navy);
+  }
+  .unit h3{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:1.08rem;
+    color:var(--navy);
+    margin:26px 0 8px;
+    border-left:4px solid var(--blue);
+    padding-left:10px;
+  }
+  .unit3 h3{border-left-color:var(--amber);}
+  .unit2 h3{border-left-color:var(--teal);}
+  .unit4 h3{border-left-color:#a4508b;}
+
+  p{margin:8px 0;}
+  ul{margin:8px 0;padding-left:22px;}
+  li{margin:4px 0;}
+
+  .example{
+    background:#f4f6fb;
+    border-left:4px solid var(--blue);
+    padding:12px 16px;
+    border-radius:6px;
+    margin:12px 0;
+    font-size:.97rem;
+  }
+  .unit2 .example{background:#eefaf9;border-left-color:var(--teal);}
+  .unit3 .example{background:#fdf5ea;border-left-color:var(--amber);}
+  .unit4 .example{background:#f9eef5;border-left-color:#a4508b;}
+
+  .example strong{color:var(--navy);}
+
+  .check{
+    margin-top:30px;
+    padding-top:20px;
+    border-top:2px dashed var(--line);
+  }
+  .check h3{
+    border:none;
+    padding:0;
+    font-size:1rem;
+    color:var(--navy);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:.8rem;
+  }
+  .question{
+    background:#fbfaf6;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px 18px;
+    margin:12px 0;
+  }
+  .question p.q-text{font-weight:bold;margin:0 0 6px;}
+  details summary{
+    cursor:pointer;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.85rem;
+    font-weight:600;
+    color:var(--blue);
+    outline:none;
+    margin-top:4px;
+  }
+  .unit2 details summary{color:var(--teal);}
+  .unit3 details summary{color:var(--amber);}
+  .unit4 details summary{color:#a4508b;}
+  details .answer{
+    margin-top:8px;
+    padding:10px 12px;
+    background:#eef3ff;
+    border-radius:6px;
+    font-size:.93rem;
+  }
+  .unit2 details .answer{background:#e4f7f5;}
+  .unit3 details .answer{background:#fbeed9;}
+  .unit4 details .answer{background:#f3e2ee;}
+
+  footer{
+    text-align:center;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    color:var(--muted);
+    font-size:.85rem;
+    padding:20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Joel's Pre-Calculus 11 Speed Run</h1>
+  <p>Units 1–4 · Quick explanations, examples, and check-for-understanding questions</p>
+</header>
+
+<nav>
+  <a href="#unit1">Unit 1: Factoring & Rational Functions</a>
+  <a href="#unit2">Unit 2: Real Numbers, Powers & Radicals</a>
+  <a href="#unit3">Unit 3: Quadratics & Inequalities</a>
+  <a href="#unit4">Unit 4: Trigonometry</a>
+</nav>
+
+<main>
+
+  <!-- UNIT 1 -->
+  <section class="unit unit1" id="unit1">
+    <span class="unit-tag">Unit 1</span>
+    <h2>Factoring and Rational Functions</h2>
+    <p><em>Big idea:</em> Factoring means breaking an expression into a product of smaller pieces multiplied together — basically "unmultiplying." It's the key tool for simplifying fractions that have variables in them (rational functions).</p>
+
+    <h3>Factoring Review</h3>
+    <p>Factoring rewrites an expression as a product of simpler expressions. The main techniques are:</p>
+    <ul>
+      <li><strong>Greatest Common Factor (GCF):</strong> pull out what every term shares.</li>
+      <li><strong>Difference of squares:</strong> a² − b² = (a − b)(a + b)</li>
+      <li><strong>Trinomial factoring:</strong> find two numbers that multiply to "ac" and add to "b" for ax² + bx + c</li>
+      <li><strong>Sum/difference of cubes:</strong> a³ ± b³ = (a ± b)(a² ∓ ab + b²)</li>
+      <li><strong>Grouping:</strong> factor pairs of terms separately, then factor out the common binomial</li>
+    </ul>
+    <div class="example">
+      <strong>Example:</strong> Factor x² − 5x − 14.<br>
+      Find two numbers that multiply to −14 and add to −5 → −7 and 2.<br>
+      x² − 5x − 14 = (x − 7)(x + 2)
+    </div>
+
+    <h3>Rational Functions</h3>
+    <p>A rational function is a fraction of two polynomials, f(x) = P(x)/Q(x). To understand its behavior, factor both the numerator and denominator.</p>
+    <ul>
+      <li><strong>Vertical asymptotes</strong> occur where the denominator equals zero (and doesn't cancel with the numerator).</li>
+      <li><strong>Holes</strong> occur where a factor cancels from both the top and bottom.</li>
+      <li><strong>Horizontal asymptotes</strong> depend on the degree of the numerator vs. the denominator (compare leading terms).</li>
+      <li>Simplify by canceling common factors — but remember the original domain restriction still applies!</li>
+    </ul>
+    <div class="example">
+      <strong>Example:</strong> f(x) = (x² − 9)/(x² − x − 12)<br>
+      Factor: (x − 3)(x + 3) / (x − 4)(x + 3)<br>
+      The (x + 3) cancels → hole at x = −3. Vertical asymptote at x = 4 (from the remaining denominator factor).
+    </div>
+
+    <div class="check">
+      <h3>Check Your Understanding</h3>
+
+      <div class="question">
+        <p class="q-text">1. Factor completely: 2x² + 7x + 3</p>
+        <details>
+          <summary>Show answer</summary>
+          <div class="answer">Find two numbers that multiply to (2)(3) = 6 and add to 7 → 6 and 1.<br>
+          2x² + 6x + x + 3 = 2x(x + 3) + 1(x + 3) = (2x + 1)(x + 3)</div>
+        </details>
+      </div>
+
+      <div class="question">
+        <p class="q-text">2. For g(x) = (x + 5)/(x² + 2x − 15), identify any holes and vertical asymptotes.</p>
+        <details>
+          <summary>Show answer</summary>
+          <div class="answer">Factor the denominator: x² + 2x − 15 = (x + 5)(x − 3).<br>
+          g(x) = (x + 5) / [(x + 5)(x − 3)] → the (x + 5) cancels, giving a <strong>hole at x = −5</strong>.<br>
+          The remaining denominator factor (x − 3) gives a <strong>vertical asymptote at x = 3</strong>.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNIT 2 -->
+  <section class="unit unit2" id="unit2">
+    <span class="unit-tag">Unit 2</span>
+    <h2>Real Numbers, Powers and Radicals</h2>
+    <p><em>Big idea:</em> This unit is about the "toolbox" numbers — how exponents (powers) and roots (radicals) behave, and how to simplify expressions that use them.</p>
+
+    <h3>The Real Number System</h3>
+    <p>Real numbers include rational numbers (integers, fractions, terminating/repeating decimals) and irrational numbers (non-repeating, non-terminating decimals like √2 or π). Basically, if you can put it on a number line, it's a real number.</p>
+
+    <h3>Exponent Rules</h3>
+    <ul>
+      <li>Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ</li>
+      <li>Quotient rule: aᵐ ÷ aⁿ = aᵐ⁻ⁿ</li>
+      <li>Power rule: (aᵐ)ⁿ = aᵐⁿ</li>
+      <li>Negative exponent: a⁻ⁿ = 1/aⁿ</li>
+      <li>Zero exponent: a⁰ = 1 (a ≠ 0)</li>
+      <li>Fractional exponent: a^(m/n) = ⁿ√(aᵐ)</li>
+    </ul>
+    <div class="example">
+      <strong>Example:</strong> Simplify (2x³y⁻²)² ÷ x⁴<br>
+      = 4x⁶y⁻⁴ ÷ x⁴ = 4x²y⁻⁴ = 4x² / y⁴
+    </div>
+
+    <h3>Radicals</h3>
+    <p>A radical √a asks "what number, squared (or cubed, etc.), gives a?" Radicals can be simplified by pulling out perfect powers, and rationalized by removing radicals from the denominator.</p>
+    <div class="example">
+      <strong>Example:</strong> Simplify √72.<br>
+      72 = 36 × 2, and 36 is a perfect square.<br>
+      √72 = √36 · √2 = 6√2
+    </div>
+    <div class="example">
+      <strong>Example:</strong> Rationalize 5 / √3.<br>
+      Multiply top and bottom by √3: (5√3) / 3
+    </div>
+
+    <div class="check">
+      <h3>Check Your Understanding</h3>
+
+      <div class="question">
+        <p class="q-text">1. Simplify: (3a²b)⁻² · a⁵</p>
+        <details>
+          <summary>Show answer</summary>
+          <div class="answer">(3a²b)⁻² = 1/(9a⁴b²)<br>
+          So the expression becomes a⁵ / (9a⁴b²) = a / (9b²)</div>
+        </details>
+      </div>
+
+      <div class="question">
+        <p class="q-text">2. Simplify √50 + 3√2 (write as a single simplified radical term).</p>
+        <details>
+          <summary>Show answer</summary>
+          <div class="answer">√50 = √25 · √2 = 5√2<br>
+          5√2 + 3√2 = 8√2</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNIT 3 -->
+  <section class="unit unit3" id="unit3">
+    <span class="unit-tag">Unit 3</span>
+    <h2>Quadratics and Inequalities</h2>
+    <p><em>Big idea:</em> A quadratic is any equation with an x² term — its graph is a parabola. This unit is about finding where that parabola crosses zero (solving) and where it's above or below zero (inequalities).</p>
+
+    <h3>Solving Quadratics</h3>
+    <p>A quadratic equation is ax² + bx + c = 0. There are three common solving methods:</p>
+    <ul>
+      <li><strong>Factoring</strong> — fastest when the expression factors nicely.</li>
+      <li><strong>Completing the square</strong> — turns the equation into vertex form.</li>
+      <li><strong>Quadratic formula:</strong> x = [−b ± √(b² − 4ac)] / (2a) — always works.</li>
+    </ul>
+    <p>The <strong>discriminant</strong>, b² − 4ac, tells you the number and type of solutions:</p>
+    <ul>
+      <li>Positive → two real solutions</li>
+      <li>Zero → one real (repeated) solution</li>
+      <li>Negative → two complex solutions</li>
+    </ul>
+    <div class="example">
+      <strong>Example:</strong> Solve x² − 4x − 5 = 0.<br>
+      Factor: (x − 5)(x + 1) = 0 → x = 5 or x = −1
+    </div>
+
+    <h3>Quadratic Inequalities</h3>
+    <p>To solve a quadratic inequality like x² − x − 6 &gt; 0:</p>
+    <ul>
+      <li>Factor and find the boundary points (roots): (x − 3)(x + 2) = 0 → x = 3, x = −2</li>
+      <li>Plot these on a number line — they split it into three intervals.</li>
+      <li>Test a point in each interval to see if it satisfies the inequality.</li>
+      <li>Write the solution using the intervals that work.</li>
+    </ul>
+    <div class="example">
+      <strong>Example:</strong> Solve x² − x − 6 &gt; 0.<br>
+      Roots: x = 3, x = −2. Testing intervals shows the inequality holds for x &lt; −2 or x &gt; 3.<br>
+      Solution: x ∈ (−∞, −2) ∪ (3, ∞)
+    </div>
+
+    <div class="check">
+      <h3>Check Your Understanding</h3>
+
+      <div class="question">
+        <p class="q-text">1. Use the discriminant to determine the number/type of solutions for 2x² + 3x + 5 = 0.</p>
+        <details>
+          <summary>Show answer</summary>
+          <div class="answer">b² − 4ac = (3)² − 4(2)(5) = 9 − 40 = −31<br>
+          Since the discriminant is negative, there are <strong>two complex (non-real) solutions</strong>.</div>
+        </details>
+      </div>
+
+      <div class="question">
+        <p class="q-text">2. Solve the inequality x² − 2x − 8 ≤ 0.</p>
+        <details>
+          <summary>Show answer</summary>
+          <div class="answer">Factor: (x − 4)(x + 2) = 0 → roots x = 4, x = −2<br>
+          Since the parabola opens upward and we want ≤ 0 (below or on the x-axis), the solution is the interval between the roots:<br>
+          <strong>−2 ≤ x ≤ 4</strong></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNIT 4 -->
+  <section class="unit unit4" id="unit4">
+    <span class="unit-tag">Unit 4</span>
+    <h2>Trigonometry</h2>
+    <p><em>Big idea:</em> Trigonometry connects angles to side lengths (in triangles) and to coordinates (on the unit circle), which lets you describe repeating, wave-like patterns.</p>
+
+    <h3>Right Triangle Trig (SOH-CAH-TOA)</h3>
+    <ul>
+      <li>sin(θ) = opposite / hypotenuse</li>
+      <li>cos(θ) = adjacent / hypotenuse</li>
+      <li>tan(θ) = opposite / adjacent</li>
+    </ul>
+
+    <h3>The Unit Circle</h3>
+    <p>On the unit circle (radius 1), the coordinates of any point at angle θ are (cos θ, sin θ). Key angles to memorize: 0°, 30°, 45°, 60°, 90°, and their radian equivalents (0, π/6, π/4, π/3, π/2).</p>
+    <div class="example">
+      <strong>Example:</strong> Find sin(30°) and cos(30°).<br>
+      sin(30°) = 1/2, cos(30°) = √3/2
+    </div>
+
+    <h3>Trig Identities</h3>
+    <ul>
+      <li>Pythagorean identity: sin²θ + cos²θ = 1</li>
+      <li>tan(θ) = sin(θ) / cos(θ)</li>
+      <li>Reciprocal identities: csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ</li>
+    </ul>
+
+    <h3>Graphing Sine and Cosine</h3>
+    <p>For y = A·sin(Bx + C) + D or y = A·cos(Bx + C) + D:</p>
+    <ul>
+      <li><strong>Amplitude</strong> = |A| (height from midline to max/min)</li>
+      <li><strong>Period</strong> = 2π / |B| (length of one full cycle)</li>
+      <li><strong>Phase shift</strong> = −C/B (horizontal shift)</li>
+      <li><strong>Vertical shift</strong> = D (moves the midline up/down)</li>
+    </ul>
+    <div class="example">
+      <strong>Example:</strong> For y = 3sin(2x) + 1, the amplitude is 3, the period is 2π/2 = π, and the midline is y = 1.
+    </div>
+
+    <div class="check">
+      <h3>Check Your Understanding</h3>
+
+      <div class="question">
+        <p class="q-text">1. If sin(θ) = 3/5 and θ is in Quadrant I, find cos(θ).</p>
+        <details>
+          <summary>Show answer</summary>
+          <div class="answer">Use sin²θ + cos²θ = 1 → (3/5)² + cos²θ = 1 → cos²θ = 1 − 9/25 = 16/25<br>
+          cos(θ) = 4/5 (positive, since θ is in Quadrant I)</div>
+        </details>
+      </div>
+
+      <div class="question">
+        <p class="q-text">2. State the amplitude, period, and vertical shift of y = 4cos(x/2) − 2.</p>
+        <details>
+          <summary>Show answer</summary>
+          <div class="answer">Amplitude = |4| = 4<br>
+          Period = 2π / (1/2) = 4π<br>
+          Vertical shift = −2 (midline is y = −2)</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Pre-Calculus Unit Review · Click "Show answer" under each question to check your work.
+</footer>
+
+</body>
+</html>
